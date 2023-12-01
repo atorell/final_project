@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <title>Other Works</title>
+</head>
+<body>
+    <div class="grid-header">
+    <a href="#main-content" id="skip-to-content">Skip to Main Content</a>
+    <nav>
+        <ul>
+            <li><a href = "index.html">Home</a></li>
+            <li><a href = "bisque.html">Bisque Fired</a></li>
+            <li><a href = "glaze.html">Glaze Fired</a></li>
+            <li class = "current"><a href = "other.html">Other Works</a></li>
+        </ul>
+    </nav>
+    <header><h1>Anna Torell Ceramics Portfolio</h1></header>
+    </div>
+    <main id="main-content">
+        <h2>Other Works</h2>
+        <p class="description">
+            Assorted pieces using paper and computer graphics works using Adobe Illustrator, InDesign, and Photoshop. Click the images to reveal the names and descriptions.
+        </p>
+        <div class="large-container">
+            <div class="flip-box">
+                <div class="flip-box-inner">
+                    <div class="flip-box-front">
+                        <img class="no-stretch" width="200" src="images/paper-sculpture.jpg" alt="Sculpture created by folding paper and gluing to a black board">
+                    </div>
+                    <div class="flip-box-back">
+                        <h2>Repetitive Growth</h2>
+                        <ul>
+                            <li>Material(s): Paper, glue, matboard</li>
+                            <li>Process(es): Repeated form and folding structure to create a 3D abstract piece</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-box">
+                <div class="flip-box-inner">
+                    <div class="flip-box-front">
+                        <img class="no-stretch" width="200" src="images/artifact.jpeg" alt="High school art magazine raw pages">
+                    </div>
+                    <div class="flip-box-back">
+                        <h2>Artifact Art Magazine</h2>
+                        <ul>
+                            <li>Material(s): Adobe InDesign</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-box">
+                <div class="flip-box-inner">
+                    <div class="flip-box-front">
+                        <img class="no-stretch" width="200" src="images/four-elements.png" alt="Photoshopped the 4 elements together">
+                    </div>
+                    <div class="flip-box-back">
+                        <h2>Four Elements</h2>
+                        <ul>
+                            <li>Material(s): Adobe Photoshop</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-box">
+                <div class="flip-box-inner">
+                    <div class="flip-box-front">
+                        <img class="no-stretch" width="200" src="images/product-design.png" alt="created a company and branding board">
+                    </div>
+                    <div class="flip-box-back">
+                        <h2>Company Logo and Branding</h2>
+                        <ul>
+                            <li>Material(s): Adobe Illustrator</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-box">
+                <div class="flip-box-inner">
+                    <div class="flip-box-front">
+                        <img class="no-stretch" width="200" src="images/recipe-mockup.jpg" alt="magazine recipe mockup">
+                    </div>
+                    <div class="flip-box-back">
+                        <h2>Recipe Mockup</h2>
+                        <ul>
+                            <li>Material(s): Adobe InDesign</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-box">
+                <div class="flip-box-inner">
+                    <div class="flip-box-front">
+                        <img class="no-stretch" width="200" src="images/brochure.png" alt="synchronized figure skating 3-fold brochure">
+                    </div>
+                    <div class="flip-box-back">
+                        <h2>Club Sports Brochure</h2>
+                        <ul>
+                            <li>Material(s): Adobe Indesign</li>
+                        </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+        $(document).ready(function () {
+            $('.flip-box').click(function () {
+                $(this).find('.flip-box-inner').toggleClass('fliped');
+            });
+        });
+    </script>
+</body>
+</html>

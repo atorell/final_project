@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bisque Fired</title>
+</head>
+<body>
+    <div class="grid-header">
+    <a href="#main-content" id="skip-to-content">Skip to Main Content</a>
+  <nav>
+    <ul>
+        <li><a href = "index.html">Home</a></li>
+        <li class = "current"><a href = "bisque.html">Bisque Fired</a></li>
+        <li><a href = "glaze.html">Glaze Fired</a></li>
+        <li><a href = "other.html">Other Works</a></li>
+    </ul>
+</nav>
+    <header><h1>Anna Torell Ceramics Portfolio</h1></header>
+    </div>
+  <main id="main-content">
+    <h2>Bisque Fired</h2>
+    <p class="description">
+        Click the images to reveal the names and descriptions.  
+    </p>
+    <div class="large-container">
+        <div class="flip-box">
+            <div class="flip-box-inner">
+                <div class="flip-box-front">
+                    <img class="no-stretch" width="200" src="images/bisque-flower.JPG" alt="large flower piece bisqued">
+                </div>
+                <div class="flip-box-back">
+                    <h2 class="bisque">Oceanic Growth Bisque</h2>
+                </div>
+            </div>
+        </div>
+        <div class="flip-box">
+            <div class="flip-box-inner">
+                <div class="flip-box-front">
+                    <img class="no-stretch" width="200" src="images/bisque-jewelry-holder.jpg" alt="bisqued jewelry holder with ring holder">
+                </div>
+                <div class="flip-box-back">
+                    <h2 class="bisque">Scalloped Jewelry Holder Bisque</h2>
+                </div>
+            </div>
+        </div>
+        <div class="flip-box">
+            <div class="flip-box-inner">
+                <div class="flip-box-front">
+                    <img class="no-stretch" width="200" src="images/bisque-pencil-holder.JPG" alt="bisqued pencil holder with a scalloped top">
+                </div>
+                <div class="flip-box-back">
+                    <h2 class="bisque">Pencil Holder Bisque</h2>
+                </div>
+            </div>
+        </div>
+        <div class="flip-box">
+            <div class="flip-box-inner">
+                <div class="flip-box-front">
+                    <img class="no-stretch" width="200" src="images/bisque-plate.JPG" alt="bisqued plate with design">
+                </div>
+                <div class="flip-box-back">
+                    <h2 class="bisque">Plate with Slip Design Bisque</h2>
+                </div>
+            </div>
+        </div>
+        <div class="flip-box">
+            <div class="flip-box-inner">
+                <div class="flip-box-front">
+                    <img class="no-stretch" width="200" src="images/bisque-scallop.JPG" alt="bisqued bowl with scallop design in certain areas">
+                </div>
+                <div class="flip-box-back">
+                    <h2 class="bisque">Scalloped Bowl Bisque</h2>
+                </div>
+            </div>
+        </div>
+        <div class="flip-box">
+            <div class="flip-box-inner">
+                <div class="flip-box-front">
+                    <img class="no-stretch" width="200" src="images/bisque-teacup.JPG" alt="bisqued teacup with handle">
+                </div>
+                <div class="flip-box-back">
+                    <h2 class="bisque">Teacup Bisque</h2>
+                </div>
+            </div>
+        </div>
+        <div class="flip-box">
+            <div class="flip-box-inner">
+                <div class="flip-box-front">
+                    <img class="no-stretch" width="200" src="images/bisque-textured-trunk.JPG" alt="bisqued tree trunk with branches">
+                </div>
+                <div class="flip-box-back">
+                    <h2 class="bisque">Textured Tree Trunk Bisqued</h2>
+                </div>
+            </div>
+        </div>
+        <div class="flip-box">
+            <div class="flip-box-inner">
+                <div class="flip-box-front">
+                    <img class="no-stretch" width="200" src="images/bisque-tree.JPG" alt="bisqued tree trunk with uneven branches">
+                </div>
+                <div class="flip-box-back">
+                    <h2 class="bisque">Tree with Branches Bisqued</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+  </main>
+  <script>
+    $(document).ready(function () {
+        $('.flip-box').click(function () {
+            $(this).find('.flip-box-inner').toggleClass('fliped');
+        });
+    });
+</script>
+</body>
+</html>

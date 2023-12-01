@@ -1,0 +1,223 @@
+/* fix skip to content */
+#skip-to-content{
+    background: grey;
+    left: 0;
+    padding: 6px;
+    -webkit-transition: top 1s ease-out;
+    transition: top 1s ease-out;
+    z-index: 1;
+    position: relative;
+    top: -90px;
+}
+
+#skip-to-content:focus{
+    position: static;
+    width: auto;
+    height: auto;
+    border: solid black 2px;
+}
+
+body, h1, h2, h3, p, ul, li, figure, img {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/* style.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FDF0F0;
+    color: #1F4172;
+}
+
+.grid-header {
+    background-color: #132043;
+    color: #F1B4BB;
+    font-weight: bold;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.grid-header a {
+    color: #FDF0F0;
+    text-decoration: none;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li.current {
+    text-decoration: underline;
+}
+
+nav ul li:hover {
+    border: 2px white solid;
+}
+
+header h1 {
+    margin: 0;
+}
+
+.thumbnail {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.description {
+    margin-top: 10px;
+    line-height: 1.5;
+}
+
+h2 {
+    color: #F1B4BB; /* Change the color to your preferred color */
+    font-size: 2em; /* Adjust the font size as needed */
+    margin-bottom: 15px; /* Add margin to provide spacing */
+}
+
+
+/* style.css */
+
+.large-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+}
+
+.flip-box {
+    background-color: transparent;
+    width: 500px;
+    height: 400px;
+    border: 1px solid #f1f1f1;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+    display: inline-block;
+    margin-left: 50px;
+    margin-bottom: 50px;
+  }
+  
+  /* This container is needed to position the front and back side */
+  .flip-box-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  /* .flip-box .flip-box-inner {
+    transform: rotateY(180deg);
+  } */
+  .fliped {
+    transform: rotateY(180deg)!important;
+  }
+  
+  /* Position the front and back side */
+  .flip-box-front, .flip-box-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+  
+  /* Style the front side (fallback if image is missing) */
+  .flip-box-front {
+    background-color: #bbb;
+    color: black;
+  }
+  
+  /* Style the back side */
+  .flip-box-back {
+    background-color: #1F4172;
+    color: #FDF0F0;
+    padding: 20px;
+    transform: rotateY(180deg);
+  }
+
+  .flip-box-back h2 {
+    color:#F1B4BB;
+  }
+
+.no-stretch {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.together {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.intro {
+    text-align: right;
+    align-self: center;
+}
+
+.cover-photo {
+    border-radius: 75px;
+    float: right;
+    padding-right: 20px;
+}
+
+.description {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+h2 {
+    color: #1F4172;
+    font-weight: bolder;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.description {
+    padding-bottom: 20px;
+}
+
+.bisque {
+    padding-top: 125px;
+}
+
+.diff-bar {
+    background-color: #132043;
+}
+
+.diff-bar h2 {
+    color: #F1B4BB;
+}
+
+.diff-bar .description {
+    color: #FDF0F0;
+}
+
+@media screen and (min-width: 800px) {
+    .large-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+    }
+    
+    .large-container :nth-child(odd) {
+        grid-column: 1/2;
+    }
+    
+    .large-container :nth-child(even) {
+        grid-column: 2/3;
+    }
+}
