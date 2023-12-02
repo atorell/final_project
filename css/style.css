@@ -18,7 +18,7 @@
     border: solid black 2px;
 }
 
-body, h1, h2, h3, p, ul, li, figure, img {
+body, h1, h2, h3, p, li, figure, img {
     margin: 0;
     padding: 0;
     border: 0;
@@ -36,10 +36,9 @@ body {
     background-color: #132043;
     color: #F1B4BB;
     font-weight: bold;
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
     align-items: center;
+    padding-left: 20px;
+    padding-bottom: 20px;
 }
 
 .grid-header a {
@@ -65,7 +64,7 @@ nav ul li:hover {
 }
 
 header h1 {
-    margin: 0;
+    display: none;
 }
 
 .thumbnail {
@@ -95,8 +94,8 @@ h2 {
 
 .flip-box {
     background-color: transparent;
-    width: 500px;
-    height: 400px;
+    width: 300px;
+    height: 200px;
     border: 1px solid #f1f1f1;
     perspective: 1000px; /* Remove this if you don't want the 3D effect */
     display: inline-block;
@@ -141,8 +140,8 @@ h2 {
   .flip-box-back {
     background-color: #1F4172;
     color: #FDF0F0;
-    padding: 20px;
     transform: rotateY(180deg);
+    overflow: scroll;
   }
 
   .flip-box-back h2 {
@@ -191,10 +190,6 @@ h2 {
     padding-bottom: 20px;
 }
 
-.bisque {
-    padding-top: 125px;
-}
-
 .diff-bar {
     background-color: #132043;
 }
@@ -205,6 +200,26 @@ h2 {
 
 .diff-bar .description {
     color: #FDF0F0;
+}
+
+@media screen and (min-width: 450px) {
+    header h1 {
+        display: contents;
+        margin-top: 5px;
+        margin-right: -20px;
+        margin-left: -5px;
+        margin-bottom: 5px;
+    }
+    .grid-header {
+        background-color: #132043;
+        color: #F1B4BB;
+        font-weight: bold;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 0;
+        padding-bottom: 0;
+    }
 }
 
 @media screen and (min-width: 800px) {
@@ -220,5 +235,59 @@ h2 {
     
     .large-container :nth-child(even) {
         grid-column: 2/3;
+    }
+
+    .flip-box {
+        width: 350px;
+        height: 200px;
+    }
+
+    .grid-header {
+        padding: 10px;
+    }
+
+    header h1 {
+        margin: 0;
+    }
+
+    .flip-box-back {
+        background-color: #1F4172;
+        color: #FDF0F0;
+        padding: 20px;
+        transform: rotateY(180deg);
+        overflow: scroll;
+      }
+}
+
+@media screen and (min-width: 1100px) {
+    .large-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+    }
+    
+    .large-container :nth-child(odd) {
+        grid-column: 1/2;
+    }
+    
+    .large-container :nth-child(even) {
+        grid-column: 2/3;
+    }
+
+    .flip-box {
+        width: 500px;
+        height: 400px;
+    }
+
+    .grid-header {
+        padding: 10px;
+    }
+
+    header h1 {
+        margin: 0;
+    }
+
+    .bisque {
+        padding-top: 125px;
     }
 }
